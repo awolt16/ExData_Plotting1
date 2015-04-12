@@ -2,18 +2,18 @@ download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUC
 unzip("Dataset.zip")
 
 subject_train <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/train/subject_train.txt", quote="\"")
-View(subject_train)
+#View(subject_train)
 X_train <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/train/X_train.txt", quote="\"")
-View(X_train)
+#View(X_train)
 y_train <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/train/y_train.txt", quote="\"")
-View(y_train)
+#View(y_train)
 
 subject_test <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/test/subject_test.txt", quote="\"")
-View(subject_test)
+#View(subject_test)
 X_test <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/test/X_test.txt", quote="\"")
-View(X_test)
+#View(X_test)
 y_test <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/test/y_test.txt", quote="\"")
-View(y_test)
+#View(y_test)
 
 activity_labels <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/activity_labels.txt", quote="\"")
 View(activity_labels)
@@ -23,7 +23,7 @@ testData<-cbind(subject_test,X_test,y_test)
 DataSet1<-rbind(trainData,testData)
 
 features <- read.table("~/Math 377/Math 378 R/UCI HAR Dataset/features.txt", quote="\"")
-View(features)
+#View(features)
 features2<-cbind("Subject",t(features),"Activity")
 colnames(DataSet1)<-features2[2,]
 
